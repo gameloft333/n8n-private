@@ -8,6 +8,7 @@ services:
     environment:
       - DB_TYPE=sqlite
       - NODE_ENV=production
+      - N8N_SECURE_COOKIE=false # 禁用安全cookie, 否则会报错, 需要设置为false
       - GENERIC_TIMEZONE=${GENERIC_TIMEZONE:-UTC}
       - TZ=${TZ:-UTC}
       # 如果需要启用 webhook,取消下面注释
